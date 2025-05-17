@@ -199,7 +199,7 @@ print(type(ativo))    # <class 'bool'>
 ### Operadores Aritméticos   
 São símbolos que servem para fazer **contas matemáticas** como somar, subtrair, multiplicar, dividir, etc.
 
-### 🔹 Principais operadores:
+#### 🔹 Principais operadores:
 
 | Operador | Significado        | Exemplo           | Resultado |
 |----------|--------------------|-------------------|-----------|
@@ -228,6 +228,228 @@ print(a ** b)  # 1000
 
 ### 💡 Dica:
 Você pode usar esses operadores dentro de `print()`, com variáveis ou valores diretos.
+
+
+### **Operadores Relacionais (em Python)**
+Também chamados de **operadores de comparação**, eles comparam valores e retornam um **booleano**: `True` (verdadeiro) ou `False` (falso).
+
+---
+
+#### 🔹 Tabela de operadores:
+
+| Operador | Significado      | Exemplo  | Resultado |
+| -------- | ---------------- | -------- | --------- |
+| `==`     | Igual a          | `5 == 5` | `True`    |
+| `!=`     | Diferente de     | `5 != 3` | `True`    |
+| `>`      | Maior que        | `7 > 4`  | `True`    |
+| `<`      | Menor que        | `3 < 8`  | `True`    |
+| `>=`     | Maior ou igual a | `6 >= 6` | `True`    |
+| `<=`     | Menor ou igual a | `2 <= 5` | `True`    |
+
+---
+
+#### 🧠 Exemplo prático:
+
+```python
+idade = 18
+print(idade >= 18)  # True (é maior ou igual a 18)
+print(idade == 21)  # False
+```
+
+---
+
+#### 💡 Usados em:
+
+* **condições** (`if`, `while`)
+* **filtros** em listas
+* **validações** de entrada do usuário
+
+```python
+senha = input("Digite a senha: ")
+print(senha == "1234")  # True se for a senha certa
+```
+
+#### **exemplos práticos** usando **operadores relacionais**:
+
+##### ✅ 1. Comparando idades:
+
+```python
+idade = 20
+
+print(idade == 20)   # True
+print(idade != 18)   # True
+print(idade > 18)    # True
+print(idade < 25)    # True
+print(idade >= 21)   # False
+print(idade <= 20)   # True
+```
+
+---
+
+##### ✅ 2. Validação simples com `input`:
+
+```python
+senha = input("Digite a senha: ")
+
+if senha == "abc123":
+    print("Acesso permitido!")
+else:
+    print("Senha incorreta.")
+```
+
+---
+
+##### ✅ 3. Usando operadores relacionais com condições:
+
+```python
+nota = float(input("Digite sua nota: "))
+
+if nota >= 7.0:
+    print("Aprovado!")
+else:
+    print("Reprovado.")
+```
+
+---
+
+##### ✅ 4. Comparando dois números:
+
+```python
+a = 5
+b = 10
+
+print(a < b)    # True
+print(a > b)    # False
+print(a == b)   # False
+```
+
+---
+
+### **Operadores Lógicos**
+São usados para **combinar condições**. Eles retornam `True` ou `False` com base no resultado das expressões.
+
+
+#### 🔹 Tabela de operadores:
+
+| Operador | Significado               | Exemplo          | Resultado |
+| -------- | ------------------------- | ---------------- | --------- |
+| `and`    | E (tudo precisa ser True) | `True and False` | `False`   |
+| `or`     | OU (basta um ser True)    | `True or False`  | `True`    |
+| `not`    | NÃO (inverte o valor)     | `not True`       | `False`   |
+
+---
+
+#### 🧠 Exemplos práticos:
+
+```python
+# 1. Usando AND
+idade = 20
+tem_carteira = True
+
+if idade >= 18 and tem_carteira:
+    print("Pode dirigir.")  # ✅
+else:
+    print("Não pode dirigir.")
+
+# 2. Usando OR
+tem_ingresso = False
+nome_na_lista = True
+
+if tem_ingresso or nome_na_lista:
+    print("Pode entrar.")  # ✅
+else:
+    print("Entrada negada.")
+
+# 3. Usando NOT
+chovendo = False
+
+if not chovendo:
+    print("Pode sair sem guarda-chuva.")  # ✅
+else:
+    print("Leve um guarda-chuva.")
+```
+
+---
+
+#### 💡 Dica rápida:
+
+* `and`: só dá `True` se **todas** as condições forem verdadeiras.
+* `or`: dá `True` se **qualquer uma** for verdadeira.
+* `not`: **inverte** o resultado lógico.
+
+---
+
+### **Estrutura de Decisão**
+
+Serve para **tomar decisões** com base em condições. Usa-se principalmente o `if`, `elif` e `else`.
+
+---
+
+#### 🔹 Sintaxe básica:
+
+```python
+if condição:
+    # código se for verdadeiro
+elif outra_condição:
+    # código se a outra for verdadeira
+else:
+    # código se nenhuma for verdadeira
+```
+
+---
+
+#### 🧠 Exemplos práticos:
+
+##### ✅ Exemplo 1: Verificando idade
+
+```python
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+    print("Maior de idade.")
+else:
+    print("Menor de idade.")
+```
+
+---
+
+##### ✅ Exemplo 2: Nota do aluno
+
+```python
+nota = float(input("Digite a nota: "))
+
+if nota >= 7:
+    print("Aprovado")
+elif nota >= 5:
+    print("Recuperação")
+else:
+    print("Reprovado")
+```
+
+---
+
+##### ✅ Exemplo 3: Par ou ímpar
+
+```python
+numero = int(input("Digite um número: "))
+
+if numero % 2 == 0:
+    print("Par")
+else:
+    print("Ímpar")
+```
+
+---
+
+#### 💡 Dica:
+
+Você pode **combinar com operadores lógicos e relacionais**:
+
+```python
+if idade >= 18 and idade <= 60:
+    print("Adulto em idade ativa")
+```
+
 
 
 
