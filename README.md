@@ -450,7 +450,66 @@ if idade >= 18 and idade <= 60:
     print("Adulto em idade ativa")
 ```
 
+---
 
+### 🧠 Estrutura de Repetição `while`
+
+#### 🔁 O que é o `while`?
+
+A estrutura `while` executa um bloco de código **enquanto** uma condição for **verdadeira**.
+
+#### 📌 Sintaxe:
+
+```python
+while condição:
+    # bloco de código
+```
+
+O Python vai **verificar a condição**:
+
+* Se for `True` (verdadeira), ele executa o bloco e **volta a checar**.
+* Se for `False`, ele **para** e segue para o código após o `while`.
+
+---
+
+#### 🛑 Exemplo simples:
+
+```python
+contador = 0
+
+while contador < 5:
+    print("Contando:", contador)
+    contador += 1
+```
+
+**Saída:**
+
+```
+Contando: 0
+Contando: 1
+Contando: 2
+Contando: 3
+Contando: 4
+```
+
+A repetição para quando `contador` chega a 5.
+
+---
+
+#### 🧩 Exercício 1 – Calculadora simples com `while`
+
+##### 📋 Enunciado:
+
+Crie um programa que simula uma calculadora simples. O usuário deve:
+
+* Informar dois números,
+* Escolher uma operação: soma (`+`), subtração (`-`), multiplicação (`*`) ou divisão (`/`),
+* O programa exibe o resultado e pergunta se o usuário quer fazer outra operação.
+* O programa só para quando o usuário digitar `"n"` para a pergunta “Deseja continuar? (s/n)”.
+
+> **Use:** `while`, variáveis, entrada e saída de dados, conversão de tipos, e operadores aritméticos.
+
+---
 
 
 
