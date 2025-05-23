@@ -512,4 +512,84 @@ Crie um programa que simula uma calculadora simples. O usuário deve:
 ---
 
 
+Perfeito! Agora vamos falar da estrutura de repetição `**for**` em Python — explicação clara e um exercício completo com todos os temas misturados, assim como no caso do `while`. 🚀
+
+---
+
+### 🧠  Estrutura de Repetição `for`
+
+#### 🔁 O que é o `for`?
+
+A estrutura `for` é usada para **repetir um bloco de código um número conhecido de vezes**, **percorrer listas, strings ou intervalos numéricos**.
+
+#### 📌 Sintaxe com `range()`:
+
+```python
+for variável in range(início, fim, passo):
+    # bloco de código
+```
+
+* `início` → valor inicial (inclusivo)
+* `fim` → valor final (exclusivo)
+* `passo` → incremento (opcional, padrão é 1)
+
+---
+
+#### 🛠 Exemplo:
+
+```python
+for i in range(1, 6):
+    print("Contando:", i)
+```
+
+**Saída:**
+
+```
+Contando: 1
+Contando: 2
+Contando: 3
+Contando: 4
+Contando: 5
+```
+
+---
+
+### 🧩 Exercício 2 – Tabuada com `for`
+
+#### 📋 Enunciado:
+
+Crie um programa que:
+
+* Peça ao usuário um número inteiro,
+* Mostre a **tabuada desse número de 1 a 10** usando `for`.
+
+> **Use:** `for`, variáveis, entrada/saída, conversão de dados e operadores aritméticos.
+
+---
+
+#### ✅ Código proposto:
+
+```python
+numero = int(input("Digite um número inteiro para ver sua tabuada: "))
+
+print(f"\n📄 Tabuada de {numero}:")
+for i in range(1, 11):
+    resultado = numero * i
+    print(f"{numero} x {i} = {resultado}")
+```
+
+---
+
+#### 🎯 O que esse exercício pratica:
+
+* ✅ Variáveis (`numero`, `i`, `resultado`)
+* ✅ Tipos de dados (`int`)
+* ✅ Entrada/saída (`input`, `print`)
+* ✅ Conversão (`int(input())`)
+* ✅ Operadores aritméticos (`*`)
+* ✅ Estrutura de repetição com `for` e `range()`
+
+---
+
+
 
