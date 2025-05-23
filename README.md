@@ -591,5 +591,74 @@ for i in range(1, 11):
 
 ---
 
+### 🧠 **Laço `for` e Complexidade Algorítmica**
+
+Já sabemos que o O laço `for` permite repetir um trecho de código **um número determinado de vezes**, sendo muito usado para percorrer estruturas como `range()`, listas, strings, etc. Junto  a **complexidade algorítmica** indica **quanto tempo (tempo de execução)** ou **quantos recursos (memória)** um algoritmo consome em função da entrada.
+É expressa usando a **notação Big-O** (`O(...)`), que mostra o **comportamento em escala**.
+
+---
+
+#### 📊 Exemplos de complexidade com `for`
+
+##### 🔹 `O(1)` – Tempo constante:
+
+```python
+print("Olá")  # Executa uma vez, sempre.
+```
+
+##### 🔹 `O(n)` – Linear:
+
+```python
+for i in range(n):
+    print(i)  # Executa n vezes
+```
+
+> O tempo cresce **proporcional ao tamanho da entrada**.
+
+##### 🔹 `O(n²)` – Quadrática:
+
+```python
+for i in range(n):
+    for j in range(n):
+        print(i, j)  # Executa n * n vezes
+```
+
+> Muito comum em algoritmos de comparação, como **bubble sort**.
+
+##### 🔹 `O(n³)` – Cúbica:
+
+```python
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            print(i, j, k)
+```
+
+> Raramente ideal. Escala muito mal.
+
+##### 🔹 `O(log n)` – Logarítmica:
+
+```python
+i = 1
+while i < n:
+    print(i)
+    i *= 2
+```
+
+> Cada passo dobra, logo poucos passos mesmo para entradas grandes.
+
+##### 🔹 `O(n log n)` – Linearítmica:
+
+> Ocorre em algoritmos eficientes de ordenação, como **Merge Sort**.
+
+
+#### ✅ Dicas:
+
+* Use o `for` com consciência: loops aninhados aumentam a complexidade.
+* Em grandes dados, **prefira algoritmos `O(n log n)` ou menores**.
+* Entenda a diferença entre **quantidade de laços** e **quantidade de trabalho feito**.
+
+---
+
 
 
