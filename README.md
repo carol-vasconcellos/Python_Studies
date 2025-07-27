@@ -8,6 +8,25 @@
 - [Entrada e Saída de Dados](#entrada-e-saída-de-dados)
 - [Conversão de Dados](#conversão-de-dados)
 - [Operadores Aritméticos](#operadores-aritméticos)
+- [Operadores Lógicos](#operadores-lógicos)
+- [Estrutura de Decisão](#estrutura-de-decisão)
+- [🧠 Estrutura de Repetição while](#-estrutura-de-repetição-while)
+- [🧠 Estrutura de Repetição for](#-estrutura-de-repetição-for)
+- [🧠 Laço for e Complexidade Algorítmica](#-laço-for-e-complexidade-algorítmica)
+- [🧠 O que são listas em Python?](#-o-que-são-listas-em-python)
+- [🧠 O que são listas de listas (matrizes) em Python?](#-o-que-são-listas-de-listas-matrizes-em-python)
+- [🧠 O que é referência de memória em Python?](#-o-que-é-referência-de-memória-em-python)
+- [🧠 O que são dicionários?](#-o-que-são-dicionários)
+- [🧠 O que são Conjuntos?](#-o-que-são-conjuntos)
+- [🧠 O que são funções?](#-o-que-são-funções)
+- [🧠 O que é Modularização?](#-o-que-é-modularização)
+- [🧠 O que é Tratamento de Exceções?](#-o-que-é-tratamento-de-exceções)
+- [Geradores em Python — explicação e exercício](#geradores-em-python--explicação-e-exercício)
+- [⚡ O que é uma função lambda?](#-o-que-é-uma-função-lambda)
+- [🧪 O que é filter()?](#-o-que-é-filter)
+- [🧠 O que é map()?](#-o-que-é-map)
+- [📂 Trabalhando com Arquivos em Python](#-trabalhando-com-arquivos-em-python)
+
 
  ESSE DIRETORIO AJUDARÁ NO CONHECIMENTO DA LINGUAGEM PYTHON
 
