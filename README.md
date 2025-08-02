@@ -26,6 +26,7 @@
 - [🧪 O que é filter()?](#-o-que-é-filter)
 - [🧠 O que é map()?](#-o-que-é-map)
 - [📂 Trabalhando com Arquivos em Python](#-trabalhando-com-arquivos-em-python)
+- [POO](#POO)
 
 
  ESSE DIRETORIO AJUDARÁ NO CONHECIMENTO DA LINGUAGEM PYTHON
@@ -2265,6 +2266,275 @@ Use `dumps`/`loads` quando quiser:
 Use `dump`/`load` quando quiser:
 
 * Trabalhar com **arquivos físicos .pkl**
+
+---
+
+## POO
+
+Claro! Vamos entrar em **POO (Programação Orientada a Objetos) em Python** com uma explicação clara e um **exercício prático** no final. 🚀
+
+---
+
+## 🧠 O que é POO?
+
+**Programação Orientada a Objetos (POO)** é um paradigma que organiza o código em torno de **objetos**, que são instâncias de **classes**. Ela permite:
+
+* Reutilização de código (herança)
+* Organização e modularidade
+* Facilidade para representar o mundo real
+
+---
+
+## 🧱 Conceitos principais
+
+| Conceito           | O que é                                                                         |
+| ------------------ | ------------------------------------------------------------------------------- |
+| **Classe**         | Modelo ou estrutura para criar objetos                                          |
+| **Objeto**         | Instância de uma classe                                                         |
+| **Atributos**      | Características do objeto (variáveis)                                           |
+| **Métodos**        | Ações que o objeto pode executar (funções dentro da classe)                     |
+| **Encapsulamento** | Proteger os dados e expor somente o necessário                                  |
+| **Herança**        | Permitir que uma classe herde atributos e métodos de outra                      |
+| **Polimorfismo**   | Permitir que métodos com mesmo nome se comportem diferente dependendo da classe |
+
+---
+
+## 🐍 Exemplo simples de POO
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+# Criando objetos
+p1 = Pessoa("Ana", 30)
+p2 = Pessoa("João", 25)
+
+# Chamando método
+p1.apresentar()
+p2.apresentar()
+```
+
+---
+
+## 🧪 Exercício POO em Python
+
+**📌 Enunciado:**
+Crie uma classe chamada `ContaBancaria` com os seguintes requisitos:
+
+* Atributos: número da conta, titular, saldo
+* Métodos:
+
+  * `depositar(valor)`
+  * `sacar(valor)` (não permitir saldo negativo)
+  * `exibir_saldo()`
+
+**🔧 Regras:**
+
+* Ao sacar, verifique se há saldo suficiente
+* Inicialmente, o saldo começa em zero
+* Faça pelo menos 1 depósito e 1 saque
+
+### 🧠 Exemplo de uso esperado:
+
+```python
+conta = ContaBancaria("1234", "Ana")
+conta.depositar(500)
+conta.sacar(200)
+conta.exibir_saldo()  # Deve exibir 300
+```
+
+---
+
+### 🧱 1. Classe e Objeto
+
+### 📘 Conceito:
+
+* **Classe**: molde/estrutura de um objeto.
+* **Objeto**: instância (exemplar real) dessa classe.
+
+### ✅ Exemplo:
+
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+# Criando objetos
+p1 = Pessoa("Ana", 30)
+p1.apresentar()
+```
+
+---
+
+## 🔐 2. Encapsulamento
+
+### 📘 Conceito:
+
+Oculta detalhes internos do objeto, expondo apenas o necessário.
+
+### ✅ Exemplo com atributos privados:
+
+```python
+class Conta:
+    def __init__(self, saldo):
+        self.__saldo = saldo  # atributo privado
+
+    def depositar(self, valor):
+        if valor > 0:
+            self.__saldo += valor
+
+    def get_saldo(self):
+        return self.__saldo
+
+conta = Conta(100)
+conta.depositar(50)
+print(conta.get_saldo())
+```
+
+---
+
+## 🧬 3. Herança
+
+### 📘 Conceito:
+
+Permite criar novas classes baseadas em uma classe existente.
+
+### ✅ Exemplo:
+
+```python
+class Animal:
+    def falar(self):
+        print("Animal faz um som")
+
+class Cachorro(Animal):
+    def falar(self):
+        print("Au au!")
+
+dog = Cachorro()
+dog.falar()
+```
+
+---
+
+## 🔁 4. Polimorfismo
+
+### 📘 Conceito:
+
+Permite que métodos com o mesmo nome se comportem de formas diferentes dependendo do objeto.
+
+### ✅ Exemplo:
+
+```python
+class Pessoa:
+    def saudacao(self):
+        print("Olá!")
+
+class Professor(Pessoa):
+    def saudacao(self):
+        print("Olá, sou um professor!")
+
+class Aluno(Pessoa):
+    def saudacao(self):
+        print("Oi, sou um aluno!")
+
+for pessoa in [Professor(), Aluno()]:
+    pessoa.saudacao()
+```
+
+---
+
+## 🧩 5. Métodos Especiais (Dunder Methods)
+
+| Método     | Função                              |
+| ---------- | ----------------------------------- |
+| `__init__` | Construtor da classe                |
+| `__str__`  | Representação legível com `print()` |
+| `__repr__` | Representação técnica               |
+| `__len__`  | Retorna tamanho                     |
+| `__eq__`   | Compara igualdade (`==`)            |
+
+### ✅ Exemplo:
+
+```python
+class Livro:
+    def __init__(self, titulo, paginas):
+        self.titulo = titulo
+        self.paginas = paginas
+
+    def __str__(self):
+        return f"{self.titulo} com {self.paginas} páginas"
+
+livro = Livro("Python na prática", 350)
+print(livro)
+```
+
+---
+
+## 🧱 6. Composição (Has-a)
+
+### 📘 Conceito:
+
+Uma classe pode conter objetos de outras classes.
+
+### ✅ Exemplo:
+
+```python
+class Motor:
+    def ligar(self):
+        print("Motor ligado")
+
+class Carro:
+    def __init__(self):
+        self.motor = Motor()  # composição
+
+    def ligar(self):
+        self.motor.ligar()
+
+carro = Carro()
+carro.ligar()
+```
+
+---
+
+## 🧪 Exercício Final de POO
+
+**Crie um sistema de cadastro de produtos.**
+
+### Requisitos:
+
+* Classe `Produto`: nome, preço e quantidade.
+* Classe `Estoque`: lista de produtos.
+
+  * Métodos:
+
+    * `adicionar_produto(produto)`
+    * `remover_produto(nome)`
+    * `listar_produtos()`
+
+### Desafio:
+
+Inclua validação no estoque (ex: não permitir quantidade negativa) e um método para calcular o valor total do estoque.
+
+---
+
+## 🧠 Extras (Avançado)
+
+* `@property` e `@setter` para criar atributos controlados
+* `@classmethod` e `@staticmethod`
+* `isinstance()` para verificar tipos
+* Criação de pacotes e módulos orientados a objetos
+* Testes com objetos (usando `unittest`)
+* Herança múltipla
+* Interfaces com `abc` (classes abstratas)
 
 ---
 
